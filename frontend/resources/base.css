@@ -14,7 +14,12 @@ body, body::backdrop, body:fullscreen {
 .content-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
+}
+
+.homepage {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
 }
 
 footer {
@@ -131,6 +136,10 @@ kbd {
     }
     h2 {
         font-size: 2rem;
+    }
+
+    .homepage{
+        width: 100%;
     }
 
     .input-container {
