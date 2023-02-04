@@ -76,10 +76,9 @@
                             value="{{.ClientsPerIPLimit}}" />
                         <b>{{.Translation.Get "custom-words-chance-setting"}}</b>
                         <div class="input-item percent-slider">
-                            <span>0%</span>
-                            <input type="range" name="custom_words_chance" min="1" max="100"
-                                value="{{.CustomWordsChance}}">
-                            <span>100%</span>
+                            <input type="range" id="custom_words_chance" name="custom_words_chance" min="1" max="100"
+                                value="{{.CustomWordsChance}}" oninput="custom_words_chance_output.value = custom_words_chance.value + '%'">
+                            <output id="custom_words_chance_output">{{.CustomWordsChance}}%</output>
                         </div>
                         <b>{{.Translation.Get "custom-words"}}</b>
                         <textarea class="input-item" name="custom_words"
@@ -139,12 +138,9 @@
         let lobbyTableLoaded = false;
         let lobbyTableBody = document.getElementById("lobby-table-body");
         let selectedLobby;
-
         let createLobbyTabButton = document.getElementById("create-lobby-tab-button");
         let joinLobbyTabButton = document.getElementById("join-lobby-tab-button");
-
         let joinButton = document.getElementById("join-button");
-
         let wordpackDetail = document.getElementById("wordpack-detail");
         let roundsDetail = document.getElementById("rounds-detail");
         let playersDetail = document.getElementById("players-detail");

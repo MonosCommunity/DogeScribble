@@ -105,13 +105,14 @@ ul {
 
 .percent-slider > input {
     justify-self: center;
-    width: 100%;
+    width: 90%;
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
 
-.percent-slider > span {
+.percent-slider > output {
     align-self: center;
+    width: 3em;
 }
 
 kbd {

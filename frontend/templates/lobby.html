@@ -175,10 +175,9 @@
                                             .Public true}}checked{{end}} />
                                     <b>{{.Translation.Get "custom-words-chance-setting"}}</b>
                                     <div class="input-item percent-slider">
-                                        <span>0%</span>
-                                        <input id="lobby-settings-custom-words-chance" type="range"
-                                            name="custom_words_chance" min="1" max="100" value="{{.CustomWordsChance}}">
-                                        <span>100%</span>
+                                        <input type="range" id="lobby-settings-custom-words-chance" name="custom_words_chance" min="1" max="100"
+                                            value="{{.CustomWordsChance}}" oninput="custom_words_chance_output.value = window['lobby-settings-custom-words-chance'].value + '%'">
+                                        <output id="custom_words_chance_output">{{.CustomWordsChance}}%</output>
                                     </div>
                                     <b>{{.Translation.Get "players-per-ip-limit-setting"}}</b>
                                     <input id="lobby-settings-clients-per-ip-limit" type="number"
