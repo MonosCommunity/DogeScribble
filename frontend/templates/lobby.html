@@ -1740,6 +1740,8 @@
         }
 
         function drawLine(context, x1, y1, x2, y2, color, lineWidth) {
+            //console.log('drawLine', x1, y1, x2, y2, color, lineWidth);
+
             // the coordinates must be whole numbers to improve performance.
             // also, decimals as coordinates is not making sense.
             x1 = Math.floor(x1);
